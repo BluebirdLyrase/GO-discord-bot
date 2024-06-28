@@ -42,7 +42,7 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if m.Author.ID == BotId {
 		return
 	}
-	fmt.Println("err.Error()")
+
 	s.ChannelMessageSend(m.ChannelID, "pong!")
 	// if m.content contains botid (Mentions) and "ping" then send "pong!"
 	if m.Content == "<@"+BotId+"> ping" || m.Content == "<@"+BotId+"> ping" {
